@@ -1,0 +1,34 @@
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.container .box{
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    margin: 3rem;
+}
+.container .box:hover .imgbox{
+    transform: translate(-3.5rem , -3.5rem);
+}
+.container .box:hover .imgbox{
+    transform: translate(5.5rem , 5.5rem);
+}
+.imgbox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    transition: all 0.5s ease-in-out;
+}
+.imgbox img{
+    width: 20rem;
+    height: 20rem;
+    object-fit: cover;
+    resize: both;
+}
