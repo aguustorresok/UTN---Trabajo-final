@@ -94,3 +94,7 @@ section img:hover{
   opacity: 1;
   filter: contrast(120%);
 }
+
+.mb-3{
+  width: 800px;
+}
