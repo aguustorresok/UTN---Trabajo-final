@@ -1,13 +1,102 @@
- body, html {
-        height: 100%;
-        background-repeat: no-repeat;
-        background: url("https://i.ibb.co/B341DpN/bg-palm.jpg") no-repeat center center fixed;
-        background-size: 100% 100%;
-    }
-.container{
-    background-color: aliceblue;
+body {
+  background: linear-gradient(180deg, #908d59 0%, #000000 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #ffffff;
+  font-family: "Nunito", sans-serif;
+  font-family: "Source Code Pro", monospace;
 }
-.card1 .card2 .card3 .card4 .card5 .card6{
-    position: relative;
-    grid-row-start: auto;
+header {
+  background-color: #000000;
+  height: 70px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.contenidoPresentacion {
+  background-color: #ffffff;
+  font-family: "Nunito", sans-serif;
+  font-family: "Source Code Pro", monospace;
+}
+.colHeader {
+  color: #ffffff;
+  height: 70px;
+  border: #ffffff 1px solid;
+  border-radius: 10px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Nunito", sans-serif;
+  font-family: "Source Code Pro", monospace;
+}
+
+.footer {
+  background-color: #f8f9fa;
+  padding: 30px 0;
+}
+
+.footer h5 {
+  color: #1c1e22;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer ul li {
+  margin-bottom: 10px;
+}
+
+.footer ul li a {
+  color: #6c757d;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.footer ul li a:hover {
+  color: #007bff;
+}
+
+.social-media li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-media li a {
+  color: #6c757d;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.social-media li a:hover {
+  color: #007bff;
+}
+section {
+  display: flex;
+  width: 600px;
+  height: 430px;
+}
+section img {
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: 0.5s ease;
+}
+section img:hover {
+  cursor: crosshair;
+  width: 300px;
+  opacity: 1;
+  filter: contrast(120%);
+}
+
+.mb-3 {
+  width: 800px;
 }
