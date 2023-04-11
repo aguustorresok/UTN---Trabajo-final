@@ -100,3 +100,10 @@ section img:hover {
 .mb-3 {
   width: 800px;
 }
+.escudo {
+  position: absolute;
+  z-index: 1;
+  height: 70px;
+  padding-top: 7px;
+  padding-left: 100px;
+}
