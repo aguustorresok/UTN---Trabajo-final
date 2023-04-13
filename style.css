@@ -13,10 +13,21 @@ header {
   top: 0;
   width: 100%;
 }
-.contenidoPresentacion {
-  background-color: #ffffff;
-  font-family: "Nunito", sans-serif;
-  font-family: "Source Code Pro", monospace;
+.fotocancha {
+  width: 600px;
+  height: 420px;
+  float:right;
+  margin-top: -350px;
+}
+.logo{
+float:left;
+height: 384px;
+}
+.presentacion{
+margin-top: -360px;
+font-family: "Nunito", sans-serif;
+color:antiquewhite;
+text-align: center;
 }
 .colHeader {
   color: #ffffff;
@@ -30,6 +41,9 @@ header {
   font-family: "Nunito", sans-serif;
   font-family: "Source Code Pro", monospace;
 }
+.colHeader:hover{
+  background-color: #ac9635;
+  }
 
 .footer {
   background-color: #f8f9fa;
