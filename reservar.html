@@ -90,23 +90,21 @@
                     <div class="multisteps-form__content">
                       <div class="form-row mt-4">
                         <div class="col-12 col-sm-6">
-                          <input class="multisteps-form__input form-control" type="text" placeholder="Nombre/s"/>
+                          <input class="multisteps-form__input form-control" type="text" pattern="^[A-Za-z]+$" placeholder="Nombre/s"/>
                         </div>
                         
                       </div>
                       <div class="form-row mt-4">
                         <div class="col-12 col-sm-6">
-                          <input class="multisteps-form__input form-control" type="text" placeholder="Apellido"/>
+                          <input class="multisteps-form__input form-control" type="text" pattern="^[A-Za-z]+$" placeholder="Apellido"/>
                         </div>
                        
                       </div>
                       <div class="form-row mt-4">
                         <div class="col-12 col-sm-6">
-                          <input class="multisteps-form__input form-control" type="password" placeholder="Correo Electronico"/>
+                          <input class="multisteps-form__input form-control" type="email" placeholder="Correo Electronico"/>
                         </div>
-                        <div class="col-12 col-sm-6 mt-4 mt-sm-0">
-                          <input class="multisteps-form__input form-control" type="password" placeholder="Correo electronico alternativo"/>
-                        </div>
+                      
                       </div>
                       <div class="button-row d-flex mt-4">
                         <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Adelante</button>
@@ -146,7 +144,7 @@
                           </select>
                         </div>
                         <div class="col-12 col-sm-6">
-                          <input class="multisteps-form__input form-control" type="text" placeholder="CIUDAD"/>
+                          <input class="multisteps-form__input form-control" type="text" pattern="^[A-Za-z]+$" placeholder="CIUDAD"/>
                         </div>
                       </div>
                       <div class="button-row d-flex mt-4">
@@ -247,6 +245,9 @@
               </p>
             </div>
           </div>
+        </div>
+        <div>
+          <p class="copy">© 2023 Grupo 1</p>
         </div>
       </footer>
   </body>
