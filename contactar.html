@@ -57,14 +57,14 @@
       <form class="row g-3 needs-validation was-validated" novalidate="">
         <div class="col-md-4">
           <label for="validationCustom01" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="validationCustom01" value="" required="">
+          <input type="text" class="form-control" id="validationCustom01" value="" pattern="^[A-Za-z]+$" required=^[A-Za-z]+$>
           <div class="valid-feedback">
             Bien!
           </div>
         </div>
         <div class="col-md-4">
           <label for="validationCustom02" class="form-label">Apellido</label>
-          <input type="text" class="form-control" id="validationCustom02" value="" required="">
+          <input type="text" class="form-control" id="validationCustom02" value="" pattern="^[A-Za-z]+$" required="^[A-Za-z]+$">
           <div class="valid-feedback">
             Bien!
           </div>
@@ -72,8 +72,8 @@
         <div class="col-md-4">
           <label for="validationCustomUsername" class="form-label">Correo</label>
           <div class="input-group has-validation">
-            <span class="input-group-text" id="inputGroupPrepend">@</span>
-            <input type="email" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required="">
+            <span class="input-group-text" id="inputGroupPrepend">📧</span>
+            <input type="email" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required=[" " + "@" + "." + " "]>
             <div class="invalid-feedback">
               Por favor, ingrese un correo válido.
             </div>
@@ -81,7 +81,7 @@
         </div>
         <div class="col-md-6">
           <label for="validationCustom03" class="form-label">Ciudad</label>
-          <input type="text" class="form-control" id="validationCustom03" required="">
+          <input type="text" class="form-control" id="validationCustom03" pattern="^[A-Za-z]+$" required="">
           <div class="invalid-feedback">
             Por favor, ingrese una ciudad válida.
           </div>
@@ -121,7 +121,7 @@
         </div>
         <div class="col-md-3">
           <label for="validationCustom05" class="form-label">Número de teléfono</label>
-          <input type="number" class="form-control" id="validationCustom05" required="">
+          <input type="number" class="form-control" id="validationCustom05" minlength="10" maxlength="14" required=[0,1,2,3,4,5,6,7,8,9]>
           <div class="invalid-feedback">
             Por favor, ingrese un número telefónico válido.
           </div>
@@ -129,7 +129,7 @@
         <form class="was-validated">
           <div class="mb-3">
             <label for="validationTextarea" class="form-label">Ingrese su mensaje!</label>
-            <textarea class="form-control" id="validationTextarea" placeholder="Required example textarea" required></textarea>
+            <textarea class="form-control" id="validationTextarea" placeholder="Escriba aquí su mensaje" required></textarea>
             <div class="invalid-feedback">
               Por favor, ingrese un mensaje válido.
             </div>
@@ -138,7 +138,7 @@
           <button class="btn btn-primary" type="submit">Enviar</button>
         </div>
       </form>
-      <p>
+      <p class="foot">
         <strong>Teléfono: </strong> +54 223 456 7890 <br />
         <strong>Correo electrónico: </strong> info@kickrental.com <br />
         <strong>Dirección:</strong> Av. Libertad 1234, Mar del Plata, Argentina
@@ -153,7 +153,6 @@
         >
       </p>
     </div>
-
     
     <footer class="footer container-fluid">
       <div class="container">
