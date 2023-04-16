@@ -278,3 +278,8 @@ section img:hover {
   -webkit-transform: scale(1);
           transform: scale(1);
 }
+.copy{
+  font-family: 'Times New Roman', Times, serif;
+  color: #6c757d;
+  text-align: center;
+}

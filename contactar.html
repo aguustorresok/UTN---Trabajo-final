@@ -54,36 +54,90 @@
       <h2>
         ¿Sugerencias? ¿Dudas? Envianos un mensaje! Sera respondido a la brevedad
       </h2>
-      <div class="mb-3 container align-content-center">
-        <label for="exampleFormControlInput1" class="form-label"
-          >Correo electronico</label
-        >
-        <input
-          type="email"
-          class="form-control"
-          id="exampleFormControlInput1"
-          placeholder="name@example.com"
-        />
-      </div>
-      <div class="mb-3 container align-content-center">
-        <label for="exampleFormControlTextarea1" class="form-label"
-          >Escribe tu mensaje!</label
-        >
-        <textarea
-          class="form-control"
-          id="exampleFormControlTextarea1"
-          rows="3"
-        ></textarea>
-      </div>
-      <button
-        type="button"
-        class="btn btn-primary container align-content-center"
-      >
-        Enviar
-      </button>
-    </div>
-    <br /><br /><br />
-    <div class="contenidoPresentacion container align-content-center">
+      <form class="row g-3 needs-validation was-validated" novalidate="">
+        <div class="col-md-4">
+          <label for="validationCustom01" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="validationCustom01" value="" required="">
+          <div class="valid-feedback">
+            Bien!
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustom02" class="form-label">Apellido</label>
+          <input type="text" class="form-control" id="validationCustom02" value="" required="">
+          <div class="valid-feedback">
+            Bien!
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustomUsername" class="form-label">Correo</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">@</span>
+            <input type="email" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required="">
+            <div class="invalid-feedback">
+              Por favor, ingrese un correo válido.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="validationCustom03" class="form-label">Ciudad</label>
+          <input type="text" class="form-control" id="validationCustom03" required="">
+          <div class="invalid-feedback">
+            Por favor, ingrese una ciudad válida.
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom04" class="form-label">Provincia</label>
+          <select class="form-select" id="validationCustom04" required="">
+            <option selected="" disabled="" value="">Elegir</option>
+            <option>Buenos Aires</option>
+            <option>Chaco</option>
+            <option>Tucuman</option>
+            <option>Neuquen</option>
+            <option>La Pampa</option>
+            <option>Mendoza</option>
+            <option>Cordoba</option>
+            <option>Formosa</option>
+            <option>Salta</option>
+            <option>San Juan</option>
+            <option>Rio Negro</option>
+            <option>San Luis</option>
+            <option>Santa Fe</option>
+            <option>Entre Rios</option>
+            <option>Santiago del estero</option>
+            <option>La Rioja</option>
+            <option>Misiones</option>
+            <option>Corrientes</option>
+            <option>Tierra del Fuego</option>
+            <option>Santa Cruz</option>
+            <option>Chubut</option>
+            <option>Jujuy</option>
+            <option>Catamarca</option>
+            <option>CABA</option>
+          </select>
+          <div class="invalid-feedback">
+            Por favor, seleccione una provincia
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom05" class="form-label">Número de teléfono</label>
+          <input type="number" class="form-control" id="validationCustom05" required="">
+          <div class="invalid-feedback">
+            Por favor, ingrese un número telefónico válido.
+          </div>
+        </div>
+        <form class="was-validated">
+          <div class="mb-3">
+            <label for="validationTextarea" class="form-label">Ingrese su mensaje!</label>
+            <textarea class="form-control" id="validationTextarea" placeholder="Required example textarea" required></textarea>
+            <div class="invalid-feedback">
+              Por favor, ingrese un mensaje válido.
+            </div>
+          </div>
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Enviar</button>
+        </div>
+      </form>
       <p>
         <strong>Teléfono: </strong> +54 223 456 7890 <br />
         <strong>Correo electrónico: </strong> info@kickrental.com <br />
@@ -158,6 +212,9 @@
             </p>
           </div>
         </div>
+      </div>
+      <div>
+        <p class="copy">© 2023 Grupo 1</p>
       </div>
     </footer>
   </body>

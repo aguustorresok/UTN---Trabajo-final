@@ -173,4 +173,3 @@ const DOMstrings = {
   
     setAnimationType(newAnimationType);
   });
-  
