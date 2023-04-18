@@ -138,6 +138,26 @@
           <button class="btn btn-primary" type="submit">Enviar</button>
         </div>
       </form>
+      <script>
+        (() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+      </script>
       <p class="foot">
         <strong>Teléfono: </strong> +54 223 456 7890 <br />
         <strong>Correo electrónico: </strong> info@kickrental.com <br />
