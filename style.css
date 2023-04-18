@@ -4,7 +4,7 @@ body {
   background-attachment: fixed;
   color: #ffffff;
   font-family: "Nunito", sans-serif;
-  font-family: "Source Code Pro", monospace;
+  
 }
 header {
   background-color: #000000;
@@ -39,6 +39,7 @@ header {
   font-family: "Nunito", sans-serif;
   font-family: "Source Code Pro", monospace;
 }
+
 .colHeader:hover {
   background-color: #d89c42;
 }
@@ -47,14 +48,21 @@ header {
   background-color: #f8f9fa;
   padding: 30px 0;
 }
-
+.barraReservar{
+  background-color: #3c3a13;
+  padding-top: 5PX;
+}
 .footer h5 {
   color: #1c1e22;
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 20px;
 }
-
+.textoReservar{
+  color: #ffffff;
+  font-family: "Nunito", sans-serif;
+  font-size: 56px;
+}
 .footer ul {
   margin: 0;
   padding: 0;
