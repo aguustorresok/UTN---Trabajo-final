@@ -1,16 +1,65 @@
-$.get("https://apis.datos.gob.ar/georef/api/provincias?campos=id,nombre",function(response){
 
-/*   response.data.forEach((elemento,index) => {
-      console.log(elemento.provincias.nombre);
-  }); */
+
+$.get("https://apis.datos.gob.ar/georef/api/provincias?campos=id,nombre",function(response){
   let provincias = [];
   response.provincias.forEach((elemento)=>{
     provincias.push(elemento.nombre);
     $("#provincias").append("<option>" + elemento.nombre +"</option>");
   });
-  console.log(provincias);
 });
 
+
+function pdf(){
+
+  const doc = new jsPDF();
+
+  let nombre = $("#nombre").val();
+  let apellido = $("#apellido").val();
+  let email = $("#email").val();
+  let fecha = $("#fecha").val();
+  let horario = $("#hora option:selected").text();
+  let provincias = $("#provincias option:selected").text();
+  let ciudad = $("#ciudad").val();
+  let textoExtra = $("#textoExtra").val();
+
+
+  doc.text(`
+Nombre:${nombre}
+Apellido:${apellido}
+Correo Electronico: ${email}
+Fecha: ${fecha}
+Horario: ${horario}
+Provincia: ${provincias}
+Ciudad: ${ciudad}
+Comentario: ${textoExtra}
+`, 10, 10);
+  doc.save("a4.pdf");
+
+}
+
+
+(() => {
+  "use strict";
+
+  const forms =
+    document.querySelectorAll(".needs-validation");
+
+  Array.from(forms).forEach((form) => {
+    form.addEventListener(
+      "submit",
+      (event) => {
+        if (!form.checkValidity()) {
+
+          event.preventDefault();
+          event.stopPropagation();
+        }
+
+        form.classList.add("was-validated");
+      },
+      false
+    );
+  });
+})();
 
 
 const DOMstrings = {

@@ -31,6 +31,8 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&family=Source+Code+Pro:wght@400;600;800&display=swap"
       rel="stylesheet"
     />
+
+
     <title>Reserva tu cancha!</title>
   </head>
 
@@ -57,25 +59,25 @@
     <div class="content" style="margin-top: 90px">
       <div class="content__inner">
         <div class="container">
-          <h2 class="content__title content__title--m-sm textoReservar">
-            RESERVA TU CANCHA!!!
-          </h2>
-          <form class="pick-animation my-4 ">
+          <h1 class="content__title content__title--m-sm">
+            RESERVA TU CANCHA !!!
+          </h1>
+          <form class="pick-animation my-4">
             <div class="form-row">
               <div class="col-5 m-auto"></div>
             </div>
           </form>
         </div>
         <div class="container overflow-hidden">
-          <div class="multisteps-form ">
+          <div class="multisteps-form">
             <div class="row">
-              <div class="container-fluid ">
-                <div class="multisteps-form__progress barraReservar">
+              <div class="container-fluid">
+                <div class="multisteps-form__progress">
                   <button
                     class="multisteps-form__progress-btn js-active"
                     type="button"
                     title="User Info"
-                    
+                    style="color:black"
                   >
                     1
                   </button>
@@ -83,6 +85,7 @@
                     class="multisteps-form__progress-btn"
                     type="button"
                     title="Address"
+                    style="color:black"
                   >
                     2
                   </button>
@@ -90,6 +93,7 @@
                     class="multisteps-form__progress-btn"
                     type="button"
                     title="Order Info"
+                    style="color:black"
                   >
                     3
                   </button>
@@ -115,6 +119,7 @@
                             pattern="^[A-Za-z]+$"
                             placeholder="Nombre/s"
                             required
+                            id="nombre"
                           />
                         </div>
                       </div>
@@ -126,6 +131,7 @@
                             pattern="^[A-Za-z]+$"
                             placeholder="Apellido"
                             required
+                            id="apellido"
                           />
                         </div>
                       </div>
@@ -135,6 +141,7 @@
                             class="multisteps-form__input form-control"
                             type="email"
                             placeholder="Correo Electronico"
+                            id="email"
                             required
                           />
                         </div>
@@ -167,6 +174,7 @@
                             type="date"
                             placeholder="Address 1"
                             required
+                            id="fecha"
                           />
                         </div>
                       </div>
@@ -175,17 +183,17 @@
                           <label for="horario">Seleccione un horario</label>
                           <select
                             name="multisteps-form__select form-control"
-                            id=""
+                            id="hora"
                             required
                           >
                             <option value="l">8:00-10:00</option>
-                            <option value="l">10:00-12:00</option>
-                            <option value="l">12:00-14:00</option>
-                            <option value="l">14:00-16:00</option>
-                            <option value="l">16:00-18:00</option>
-                            <option value="l">18:00-20:00</option>
-                            <option value="l">20:00-22:00</option>
-                            <option value="l">22:00-00:00</option>
+                            <option value="2">10:00-12:00</option>
+                            <option value="3">12:00-14:00</option>
+                            <option value="4">14:00-16:00</option>
+                            <option value="5">16:00-18:00</option>
+                            <option value="6">18:00-20:00</option>
+                            <option value="7">20:00-22:00</option>
+                            <option value="8">22:00-00:00</option>
                           </select>
                         </div>
                       </div>
@@ -208,6 +216,7 @@
                             type="text"
                             pattern="^[A-Za-z]+$"
                             placeholder="CIUDAD"
+                            id="ciudad"
                             required="^[A-Za-z]+$"
                           />
                         </div>
@@ -247,6 +256,7 @@
                           class="multisteps-form__textarea form-control"
                           placeholder="Añadir mensaje o pregunta"
                           required
+                          id="textoExtra"
                         ></textarea>
                       </div>
                       <div class="button-row d-flex mt-4">
@@ -259,39 +269,14 @@
                             Atras
                           </button>
                         </div>
-
                         <button
-                          class="btn btn-success ml-auto"
+                          class="btn btn-danger pdf"
+                          onclick="pdf()"
                           type="submit"
-                          title="Finalizar"
                         >
-                          Finalizar
+                          Enviar y generar PDF
                         </button>
-                        <script>
-                          (() => {
-                            "use strict";
 
-                            // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                            const forms =
-                              document.querySelectorAll(".needs-validation");
-
-                            // Loop over them and prevent submission
-                            Array.from(forms).forEach((form) => {
-                              form.addEventListener(
-                                "submit",
-                                (event) => {
-                                  if (!form.checkValidity()) {
-                                    event.preventDefault();
-                                    event.stopPropagation();
-                                  }
-
-                                  form.classList.add("was-validated");
-                                },
-                                false
-                              );
-                            });
-                          })();
-                        </script>
                       </div>
                     </div>
                   </div>
@@ -308,6 +293,7 @@
       integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
 
     <script src="index.js"></script>
 
