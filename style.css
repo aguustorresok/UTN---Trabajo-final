@@ -13,12 +13,7 @@ header {
   top: 0;
   width: 100%;
 }
-.fotocancha {
-  width: 600px;
-  height: 420px;
-  float: right;
-  margin-top: -350px;
-}
+
 .logo {
   float: left;
   height: 384px;
