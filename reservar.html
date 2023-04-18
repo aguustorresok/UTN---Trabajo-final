@@ -83,19 +83,19 @@
                     <div class="form-row mt-4">
                       <div class="col-12 col-sm-6">
                         <input class="multisteps-form__input form-control" type="text" pattern="^[A-Za-z]+$"
-                          placeholder="Nombre/s" />
+                          placeholder="Nombre/s" required/>
                       </div>
                     </div>
                     <div class="form-row mt-4">
                       <div class="col-12 col-sm-6">
                         <input class="multisteps-form__input form-control" type="text" pattern="^[A-Za-z]+$"
-                          placeholder="Apellido" />
+                          placeholder="Apellido" required/>
                       </div>
                     </div>
                     <div class="form-row mt-4">
                       <div class="col-12 col-sm-6">
                         <input class="multisteps-form__input form-control" type="email"
-                          placeholder="Correo Electronico" />
+                          placeholder="Correo Electronico" required />
                       </div>
                     </div>
                     <div class="button-row d-flex mt-4">
@@ -114,13 +114,13 @@
                     <div class="form-row mt-4">
                       <div class="col">
                         <label for="dia">Seleccione una fecha</label>
-                        <input class="multisteps-form__input form-control" type="date" placeholder="Address 1" />
+                        <input class="multisteps-form__input form-control" type="date" placeholder="Address 1" required/>
                       </div>
                     </div>
                     <div class="form-row mt-4">
                       <div class="col">
                         <label for="horario">Seleccione un horario</label>
-                        <select name="multisteps-form__select form-control" id="">
+                        <select name="multisteps-form__select form-control" id="" required>
                           <option value="l">8:00-10:00</option>
                           <option value="l">10:00-12:00</option>
                           <option value="l">12:00-14:00</option>
@@ -134,13 +134,13 @@
                     </div>
                     <div class="form-row mt-4">
                       <div class="col-6 col-sm-3 mt-4 mt-sm-0">
-                        <select class="multisteps-form__select form-control" id="provincias">
+                        <select class="multisteps-form__select form-control" id="provincias" required>
                           <option selected="selected">PROVINCIA</option>
                         </select>
                       </div>
                       <div class="col-12 col-sm-6">
                         <input class="multisteps-form__input form-control" type="text" pattern="^[A-Za-z]+$"
-                          placeholder="CIUDAD" />
+                          placeholder="CIUDAD" required />
                       </div>
                     </div>
                     <div class="button-row d-flex mt-4">
@@ -161,15 +161,35 @@
                   <div class="multisteps-form__content">
                     <div class="form-row mt-4">
                       <textarea class="multisteps-form__textarea form-control"
-                        placeholder="Añadir mensaje o pregunta"></textarea>
+                        placeholder="Añadir mensaje o pregunta" required></textarea>
                     </div>
                     <div class="button-row d-flex mt-4">
                       <button class="btn btn-primary js-btn-prev" type="button" title="Prev">
                         Atras
                       </button>
-                      <button class="btn btn-success ml-auto" type="button" title="Send">
+                      <button class="btn btn-success ml-auto" type="submit" title="Finalizar">
                         Finalizar
                       </button>
+                      <script>
+                        (() => {
+                  'use strict'
+                
+                  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                  const forms = document.querySelectorAll('.needs-validation')
+                
+                  // Loop over them and prevent submission
+                  Array.from(forms).forEach(form => {
+                    form.addEventListener('submit', event => {
+                      if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                      }
+                
+                      form.classList.add('was-validated')
+                    }, false)
+                  })
+                })()
+                      </script>
                     </div>
                   </div>
                 </div>
